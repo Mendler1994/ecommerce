@@ -1,4 +1,4 @@
-const items = document.getElementById('items')
+const cards = document.getElementById('cards')
 const templateCard = document.getElementById('template-card').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
@@ -6,7 +6,7 @@ let carrito = {}
 document.addEventListener('DOMContentLoaded', () => {
     fetchData()
 })
-items.addEventListener('click', e => {
+cards.addEventListener('click', e => {
     addCarrito(e)
 })
 
@@ -31,7 +31,7 @@ const pintarCards = data => {
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
     })
-    items.appendChild(fragment)
+    cards.appendChild(fragment)
 }
 
 const addCarrito = e => {
